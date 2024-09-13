@@ -3,7 +3,11 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi'; // Importing icons from React Icons
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  authButtons?: React.ReactNode; // Accepting buttons as a prop
+}
+
+const Navbar: React.FC<NavbarProps> = ({ authButtons }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,41 +16,44 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             {/* Logo */}
-            <Link href="/" className="text-blue-600 text-3xl tracking-wider font-semibold font-moonhouse">
+            <Link href="/" className="text-blue-600 text-2xl tracking-wider font-semibold font-moonhouse">
               Mercatinuum
             </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-6">
               {/* Navigation Links */}
-              <Link href="/" className="flex items-center text-gray-800 hover:text-blue-600">
+              <Link href="/" className="relative group text-gray-800 hover:text-blue-600">
                 Home
+                <span className="block h-[2px] bg-blue-600 absolute left-0 bottom-0 w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></span>
               </Link>
-              <Link href="/about" className="flex items-center text-gray-800 hover:text-blue-600">
+              <Link href="/about" className="relative group text-gray-800 hover:text-blue-600">
                 About
+                <span className="block h-[2px] bg-blue-600 absolute left-0 bottom-0 w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></span>
               </Link>
-              <Link href="/jobs" className="flex items-center text-gray-800 hover:text-blue-600">
+              <Link href="/jobs" className="relative group text-gray-800 hover:text-blue-600">
                 Jobs
+                <span className="block h-[2px] bg-blue-600 absolute left-0 bottom-0 w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></span>
               </Link>
-              <Link href="/cv" className="flex items-center text-gray-800 hover:text-blue-600">
+              <Link href="/cv" className="relative group text-gray-800 hover:text-blue-600">
                 Build your CV
+                <span className="block h-[2px] bg-blue-600 absolute left-0 bottom-0 w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></span>
               </Link>
-              <Link href="/contact" className="flex items-center text-gray-800 hover:text-blue-600">
+              <Link href="/contact" className="relative group text-gray-800 hover:text-blue-600">
                 Contact
+                <span className="block h-[2px] bg-blue-600 absolute left-0 bottom-0 w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></span>
               </Link>
+              {/* Auth Buttons */}
+              {authButtons && <div>{authButtons}</div>}
             </div>
           </div>
           {/* Mobile Menu Button */}
-          <div className="-mr-2 flex md:hidden z-50"> {/* Ensure z-index here */}
+          <div className="-mr-2 flex md:hidden z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-800 p-2 rounded-md hover:text-blue-600 focus:outline-none"
             >
-              {isOpen ? (
-                <FiX className="h-6 w-6" />
-              ) : (
-                <FiMenu className="h-6 w-6" />
-              )}
+              {isOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -80,6 +87,7 @@ const Navbar: React.FC = () => {
           <Link href="/contact" className="block text-gray-800 hover:text-blue-600" onClick={() => setIsOpen(false)}>
             Contact
           </Link>
+          {authButtons && <div>{authButtons}</div>}
         </div>
       </div>
     </div>

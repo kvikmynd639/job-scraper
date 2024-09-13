@@ -27,21 +27,21 @@ export default function Home() {
             <div className="flex flex-col items-center text-white space-y-2" data-aos="zoom-in">
               <h3 className="text-3xl font-semibold">Take a tour around</h3>
               <p className="text-sm mb-2">Explore the future of job platforms</p>
-              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-xl">
+              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-tl-2xl rounded-br-2xl border-[2px] border-transparent hover:border-indigo-400 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(75,0,130,0.8)]">
                 Get Started
               </button>
             </div>
             <div className="flex flex-col items-center text-white space-y-2" data-aos="zoom-in" data-aos-delay="200">
               <h3 className="text-3xl font-semibold">100% Customisable</h3>
               <p className="text-sm mb-2">Manage all your job-related information</p>
-              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-xl">
+              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-tl-2xl rounded-br-2xl border-[2px] border-transparent hover:border-indigo-400 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(75,0,130,0.8)]">
                 View Profile
               </button>
             </div>
             <div className="flex flex-col items-center text-white space-y-2" data-aos="zoom-in" data-aos-delay="400">
               <h3 className="text-3xl font-semibold">Network</h3>
               <p className="text-sm mb-2">Stay connected with your network</p>
-              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-xl">
+              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-tl-2xl rounded-br-2xl border-[2px] border-transparent hover:border-indigo-400 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(75,0,130,0.8)]">
                 Connect Now
               </button>
             </div>

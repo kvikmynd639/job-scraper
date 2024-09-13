@@ -73,8 +73,12 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage : {
-        "landing": "url('/imgs/landing.jpg')"
+        "landing": "url('/imgs/landing.jpg')",
+        "mercatino": "url('/imgs/mercatino-cutie.webp')"
       },
+      fontFamily: {
+        "moonhouse":"'Moonhouse', sans-serif",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

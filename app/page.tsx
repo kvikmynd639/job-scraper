@@ -17,13 +17,13 @@ export default function Home() {
       <div className="relative w-full h-screen">
         {/* Image with Softer Gradient Overlay */}
         <div className="absolute inset-0">
-          <img src="/imgs/landing.jpg" className="object-cover w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-t from-purple-900 via-transparent to-transparent"></div>
+          <img src="/imgs/mercatino-cutie.webp" className="object-cover w-full h-full" />
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent"></div>
         </div>
 
         {/* 3 Transparent Divs at the Bottom */}
         <div className="absolute bottom-0 w-full" data-aos="fade-up">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto pb-24">
             <div className="flex flex-col items-center text-white space-y-2" data-aos="zoom-in">
               <h3 className="text-3xl font-semibold">Take a tour around</h3>
               <p className="text-sm mb-2">Explore the future of job platforms</p>
@@ -98,6 +98,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }

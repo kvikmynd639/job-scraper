@@ -18,7 +18,7 @@ export default function Home() {
         {/* Image with Softer Gradient Overlay */}
         <div className="absolute inset-0">
           <img src="/imgs/mercatino-cutie.webp" className="object-cover w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent"></div>
         </div>
 
         {/* 3 Transparent Divs at the Bottom */}
